@@ -1,8 +1,8 @@
-# Usa una imagen base de Nginx
+# Dockerfile
 FROM nginx:alpine
 
-# Copia el archivo index.html a la carpeta predeterminada de Nginx
-COPY index.html /usr/share/nginx/html/index.html
+# Copiar archivos HTML al directorio de contenido de Nginx
+COPY ./src /usr/share/nginx/html
 
 # Exponer el puerto 80
 EXPOSE 80
